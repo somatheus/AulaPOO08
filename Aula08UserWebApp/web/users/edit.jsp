@@ -61,28 +61,28 @@
         <h3>Editar</h3>
        <%if(error!=null){%>
        
-             <div style="color: red"><%= error%></div>
+             <div style="color: red"><%=error%></div>
              
        <%}else{%>
        
         <form method="post">
             
-            <input type="hidden" name="i" value="<%=i%>">
+            <input type="hidden" name="i" value="<%=i %>">
             
             <label>Nome de usuário:</label> <br/>
-            <input type="text" name="name" value="<%=user.getName() %>"/> <br/>
+            <input type="text" name="name" value="<%=user.getName()%>"/> <br/>
            
             <label>E-mail:</label><br />
-            <input type="text" name="email" value="<%=user.getEmail() %>"/> <br />
+            <input type="text" name="email" value="<%=user.getEmail()%>"/> <br />
             
             <fieldset>
                 <legend>Senha</legend>
                 
                 <label>Senha:</label><br />
-                <input type="password" name="senha1" value="<%= user.getSenha() %>" /><br />
+                <input type="password" name="senha1" value="<%=user.getSenha()%>" /><br />
                 
                 <label>Confirmar senha:</label><br />
-                <input type="password" name="senha2" value="<%= user.getSenha() %>"/><br />
+                <input type="password" name="senha2" value="<%=user.getSenha()%>"/><br />
             </fieldset>
             <br />
             <input type="submit" name="edit" value="Alterar"/><br />
