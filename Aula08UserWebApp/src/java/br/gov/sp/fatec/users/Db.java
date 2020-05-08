@@ -15,6 +15,7 @@ public class Db {
     
     private static ArrayList<User> users;
     
+       
     public static ArrayList<User> getUsers(){
         if(users == null){
             users = new ArrayList<>();
@@ -34,5 +35,20 @@ public class Db {
         }
         
         return users;
+    }
+    
+    private static ArrayList<Contato> contatos;
+    public static ArrayList<Contato> getContatos(){
+        if(contatos == null){
+            contatos = new ArrayList<>();
+            Contato admin = new Contato();
+            admin.setNome("Contato1");
+            admin.setEmail("contato@conta.com.br");
+            admin.setTelefone("1334852454");
+            contatos.add(admin);
+
+        }
+        
+        return contatos;
     }
 }

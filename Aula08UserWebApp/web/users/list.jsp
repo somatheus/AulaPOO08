@@ -26,13 +26,13 @@
             </tr>
             <%for(User user: Db.getUsers()){%>
             <tr>
-                <td><%= user.getName()%></td>  
-                <td><%= user.getEmail()%></td>
+                <td><%=user.getName()%></td>
+                <td><%=user.getEmail()%></td>
                 <td>
-                    <%int i = Db.getUsers().indexOf(user);%>
-                    <a href="edit.jsp?<%=i%>">Alterar</a>
-                    <a href="#">Excluir</a>
+                    <% int i = Db.getUsers().indexOf(user);%>
+                    <a href="edit.jsp?i=<%=i%>">Alterar</a>
                 </td>
+                <td><a href="delete.jsp?i=<%=i%>">Excluir</a></td>
             </tr>
             <%}%>
         </table>
